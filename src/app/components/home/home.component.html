@@ -27,7 +27,6 @@
                     <tr class="text-center">
                         <th>#</th>
                         <th>Nombre</th>
-                        <th>Edad</th>
                         <th>Telefono</th>
                         <th>Fecha de Nacimiento</th>
                         <th>Direcciòn</th>
@@ -39,7 +38,6 @@
                     <tr class="text-center" *ngFor="let user of users | filtro: userSearch">
                         <td>{{ user.id }}</td>
                         <td>{{ user.nombre }}</td>
-                        <td>{{ user.edad }}</td>
                         <td>{{ user.telefono }}</td>
                         <td>{{ user.fecha_nacimiento }}</td>
                         <td>{{ user.direccion }}</td>
@@ -75,12 +73,6 @@
                             <label for="nombre">Nombre</label>
                             <input type="text" id="nombre" name="nombre" class="form-control"
                                 [(ngModel)]="newUser.nombre" required />
-
-                        </div>
-                        <div class="form-group">
-                            <label for="edad">Edad</label>
-                            <input type="number" id="edad" name="edad" class="form-control" [(ngModel)]="newUser.edad"
-                                required />
 
                         </div>
                         <div class="form-group">
@@ -131,12 +123,6 @@
                             <label for="nombre">Nombre</label>
                             <input type="text" id="nombre" name="nombre" class="form-control"
                                 [(ngModel)]="editedUser.nombre" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="edad">Edad</label>
-                            <input type="number" id="edad" name="edad" class="form-control"
-                                [(ngModel)]="editedUser.edad" required />
-
                         </div>
                         <div class="form-group">
                             <label for="telefono">Telefono</label>
